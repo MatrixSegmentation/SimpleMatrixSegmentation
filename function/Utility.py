@@ -21,7 +21,7 @@ def clean():
             remove(r)
 
 
-def crate_directory(dirs=['Frammenti', 'Compressi', 'Result', 'Result\\jpegDirect']):
+def crate_directory(dirs=['Frammenti', 'FrammentiJpeg', 'Compressi', 'Result', 'Result\\jpegDirect']):
     for d in dirs:
         if not path.exists(d):
             makedirs(d)
