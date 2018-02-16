@@ -1,4 +1,5 @@
 import matplotlib.image as mpimg
+import matplotlib.backend_bases as mbak
 import scipy.misc
 
 
@@ -7,7 +8,11 @@ def estrazione_frammenti(file_name_img_originale, numero_divisioni, output_path=
     grandezza_frammento = (round(img.shape[0] / numero_divisioni), round(img.shape[1] / numero_divisioni), img.shape[2])
     for i in range(numero_divisioni):
         for j in range(numero_divisioni):
-            frammento = img[i * grandezza_frammento[0]:i * grandezza_frammento[0] + grandezza_frammento[0],
-                        j * grandezza_frammento[1]:j * grandezza_frammento[1] + grandezza_frammento[1]]
+            inizio_frammento_righe = i * grandezza_frammento[0]
+            fine_frammento_righe = i * grandezza_frammento[0] + grandezza_frammento[0]
+            inizio_frammento_colonne = j * grandezza_frammento[1]
+            fine_frammento_colonne = j * grandezza_frammento[1] + grandezza_frammento[1]
+            frammento = img[inizio_frammento_righe:fine_frammento_righe,inizio_frammento_colonne:fine_frammento_colonne]
             scipy.misc.toimage(frammento).save(output_path + "frammento" + str(i) + "," + str(j) + ".bmp")
     return grandezza_frammento
+
