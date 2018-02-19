@@ -10,14 +10,14 @@ crate_directory()
 clean()
 
 filenameIntoImgInput='ImgInput\\delta.bmp'
-arr=["0,0","0,1","1,0"]
-frammentiImpo=["frammento"+arr.pop(0)+".bmp"]
+arr = ["0,0", "0,1", "1,0"]
+frammentiImpo = ["frammento"+arr.pop(0)+".bmp"]
 
 for i in arr:
     frammentiImpo.append("frammento"+i+".bmp")
 
-forground = 90
-background = 45
+foreground = 90
+background = 30
 qualityJpegDirect = 60
 numeroDivisioni = 4
 pathResutJpeg = "Result\\jpegDirect\\result.jpg"
@@ -25,7 +25,7 @@ pathResutJpeg = "Result\\jpegDirect\\result.jpg"
 print("Ottengo i frammenti : ")
 grandezza_frammento = estrazione_frammenti(filenameIntoImgInput, numeroDivisioni)
 print("End\nComprimo i frammenti : ")
-comprimi_frammenti(frammentiImpo, forground, background)
+comprimi_frammenti(frammentiImpo, foreground, background)
 print("End\nUnisco i frammenti : ")
 merge(filenameIntoImgInput, grandezza_frammento)
 print("End\nCompressione diretta e salvataggio in bitmap : ")
@@ -39,5 +39,4 @@ statistic_frammenti(frammentiImpo)
 print("End\n\nConfronto del'immagine intera : ")
 tar_xz_compress()
 statistic(filenameIntoImgInput)
-
 print("End")

@@ -5,7 +5,7 @@ import scipy.misc
 
 def estrazione_frammenti(file_name_img_originale, numero_divisioni, output_path="Frammenti\\"):
     img = mpimg.imread(file_name_img_originale)
-    grandezza_frammento = (round(img.shape[0] / numero_divisioni), round(img.shape[1] / numero_divisioni), img.shape[2])
+    grandezza_frammento = (round(img.shape[0] / numero_divisioni), round(img.shape[1] / numero_divisioni))
     for i in range(numero_divisioni):
         for j in range(numero_divisioni):
             inizio_frammento_righe = i * grandezza_frammento[0]
