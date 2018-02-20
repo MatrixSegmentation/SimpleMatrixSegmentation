@@ -1,5 +1,4 @@
 import matplotlib.image as mpimg
-import matplotlib.backend_bases as mbak
 import scipy.misc
 
 

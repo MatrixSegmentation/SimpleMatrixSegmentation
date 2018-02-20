@@ -20,7 +20,6 @@ def statistic(input_filename_img):
     print("JPEG\tC.R. :" + str(img_input / peso_jpeg) + ":1\tPSNR : " + str(jpeg_psnr))
 
 
-
 def statistic_frammenti(frammenti_importanti):
     for i in frammenti_importanti:
         frammento_jpeg = mpimg.imread("FrammentiJpeg\\" + i)
