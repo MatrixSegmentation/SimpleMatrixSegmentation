@@ -16,8 +16,8 @@ frammentiImpo = ["frammento"+arr.pop(0)+".bmp"]
 for i in arr:
     frammentiImpo.append("frammento"+i+".bmp")
 
-foreground = 90
-background = 30
+foreground = 80
+background = 40
 qualityJpegDirect = 60
 numeroDivisioni = 4
 pathResutJpeg = "Result\\jpegDirect\\result.jpg"
