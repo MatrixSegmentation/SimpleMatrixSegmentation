@@ -9,16 +9,16 @@ from function.Statistic import *
 crate_directory()
 clean()
 
-filenameIntoImgInput='ImgInput\\delta.bmp'
-arr = ["0,0", "0,1", "1,0"]
+filenameIntoImgInput='ImgInput\\limone.bmp'
+arr = ["1,0","2,0","2,1","3,0"]
 frammentiImpo = ["frammento"+arr.pop(0)+".bmp"]
 
 for i in arr:
     frammentiImpo.append("frammento"+i+".bmp")
 
 foreground = 80
-background = 40
-qualityJpegDirect = 60
+background = 50
+qualityJpegDirect = 70
 numeroDivisioni = 4
 pathResutJpeg = "Result\\jpegDirect\\result.jpg"
 
